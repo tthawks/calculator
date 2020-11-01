@@ -11,42 +11,52 @@ answer - result of used operation
 cached - is result from cache (or is it calculated)
 
 ## Implemented math operations
-`add`
+### add
+
 Sumarizes input values
 
-###Example:
+Example
+
 Request:
 ```http://localhost:3000/add?x=20&y=7```
+
 Response: 
 ```{"action":"add","x":20,"y":7,"answer":27,"cached":false}```
 
+### subtract
 
-`subtract`
 Subtract y value from x value
 
-###Example:
+Example
+
 Request:
 ```http://localhost:3000/subtract?x=20&y=7```
+
 Response: 
 ```{"action":"subtract","x":20,"y":7,"answer":13,"cached":false}```
 
+### multiply
 
-`multiply`
 Multiplies input values
 
-###Example:
+Example
+
 Request:
 ```http://localhost:3000/multiply?x=20&y=7```
+
 Response: 
 ```{"action":"multiply","x":20,"y":7,"answer":140,"cached":false}```
 
 
-`divide`
+### divide
+
 Divides x value with y value
 
-###Example:
+Example
+
 Request:
 ```http://localhost:3000/divide?x=20&y=7```
+
 Response: 
 ```{"action":"divide","x":20,"y":7,"answer":2.857142857142857,"cached":false}```
 
