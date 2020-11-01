@@ -5,9 +5,13 @@ Calculator is simple web application which uses get request on predefined path w
 Implemented mathematical operations are add, subtract, multiply, and divide.
 
 Results are returned as JSON object with keys:
+
 action - math operation used
+
 x, y - input values
+
 answer - result of used operation 
+
 cached - is result from cache (or is it calculated)
 
 ## Implemented math operations
