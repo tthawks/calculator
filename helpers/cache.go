@@ -1,4 +1,4 @@
-package models
+package helpers
 
 import (
 	"time"
@@ -6,8 +6,10 @@ import (
 	"github.com/patrickmn/go-cache"
 )
 
+// Cache is instance of go-cache with 1 minute expiration
 var Cache = cache.New(1*time.Minute, 2*time.Minute)
 
+// CacheEntry data stucture that will be cached
 type CacheEntry struct {
 	Key    string  `json:"-"`
 	Action string  `json:"action"`
@@ -17,11 +19,13 @@ type CacheEntry struct {
 	Cached bool    `json:"cached"`
 }
 
+// CacheSet method sets data into cache
 func CacheSet(key string, entry interface{}) bool {
 	Cache.Set(key, entry, cache.DefaultExpiration)
 	return true
 }
 
+// CacheGet method gets data from cache
 func CacheGet(key string) (CacheEntry, bool) {
 	var entry CacheEntry
 	var found bool
